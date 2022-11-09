@@ -1,0 +1,18 @@
+@import './global.scss';
+
+// import style components
+@import './components/layout/header.scss';
+@import './components/layout/sidenav.scss';
+@import './components/common/MyDialog.scss';
+@import './components/common/MyTable.scss';
+@import './components/common/MyChart.scss';
+
+
+// import style template components
+@import './template/main.css';
+@import './template/responsive.css';
+
+//import css pages
+@import './pages/home/index.scss';
+@import './pages/login/index.scss';
+

@@ -1,0 +1,70 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "react-app",
+    "airbnb",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "12",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "jsx-a11y"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@assets", "./src/assets"],
+          ["@common", "./src/common"],
+          ["@components", "./src/components"],
+          ["@dummy", "./src/dummy"],
+          ["@pages", "./src/pages"],
+          ["@mobilePages", "./src/mobilePages"],
+          ["@services", "./src/services"],
+          ["@store", "./src/store"],
+          ["@styles", "./src/styles"],
+          ["@translations", "./src/translations"]
+        ],
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": ["warn", {}],
+    "jsx-a11y/anchor-has-content": ["warn", {}],
+    "no-underscore-dangle": [
+      "warn",
+      {
+        "allowAfterThis": false,
+        "allowAfterSuper": false,
+        "allowAfterThisConstructor": false,
+        "enforceInMethodNames": false,
+        "allowFunctionParams": true
+      }
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-array-index-key": ["warn"],
+    "react/require-default-props": "off",
+    "no-unused-vars": ["warn"],
+    "react/forbid-prop-types": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "import/no-named-as-default": 0,
+    "no-param-reassign": ["off"]
+  }
+}
