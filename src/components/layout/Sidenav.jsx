@@ -24,7 +24,7 @@ function Sidenav({ color }) {
     {
       id: 2,
       path: PATH_URL.CAMERA_MANAGEMENT,
-      title: 'ListCamera',
+      title: 'List Camera',
       icon: <IconDashboard />,
       pageItem: 'camera-management',
     },

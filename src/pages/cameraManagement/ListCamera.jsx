@@ -1,13 +1,14 @@
-import { DeleteFilled } from '@ant-design/icons';
+import { DeleteFilled, EditFilled } from '@ant-design/icons';
 import MyDialog from '@components/common/MyDialog';
 import MyTable from '@components/common/MyTable';
-import adminUserList from '@dummy/adminUserList';
-import { Radio, Row } from 'antd';
+import cameraList from '@dummy/cameraList';
+import { Image, Radio, Row } from 'antd';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 function ListCamera() {
-  const titleTable = 'List Admin User';
+  const titleTable = 'List Camera';
+
   const [isVisibleDeleteUser, setIsVisibleDeleteUser] = useState({
     isShow: false,
     id: null,
@@ -50,24 +51,17 @@ function ListCamera() {
 
   const columns = [
     {
-      title: 'ID',
-      dataIndex: 'id',
-      key: 'ID',
+      title: 'Image',
+      dataIndex: 'url',
+      key: 'url',
+      render: (_, values) => {
+        return <Image width={100} height={50} src={values?.url} />;
+      },
     },
     {
       title: 'Name',
-      dataIndex: 'nickname',
-      key: 'userName',
-    },
-    {
-      title: 'Create At',
-      dataIndex: 'createdAt',
-      key: 'registrationDate',
-    },
-    {
-      title: 'Email',
-      dataIndex: 'email',
-      key: 'email',
+      dataIndex: 'name',
+      key: 'name',
     },
     {
       align: 'center',
@@ -78,7 +72,7 @@ function ListCamera() {
             className="fz-24 delete-btn"
             value="delete"
           >
-            <DeleteFilled />
+            <EditFilled />
           </Radio.Button>
         </Radio.Group>
       ),
@@ -100,7 +94,7 @@ function ListCamera() {
       <MyTable
         titleTable={titleTable}
         columns={columns}
-        data={adminUserList}
+        data={cameraList}
         pagination={pagination}
         handleRecord={handleRecord}
         onChangeTable={handleTableChange}

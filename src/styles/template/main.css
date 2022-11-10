@@ -404,7 +404,7 @@ body {
   margin-top: 10px;
 }
 
-.ant-list.ant-list-split.header-notifications-dropdown {
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown {
   background: #fff;
   box-shadow: 0 20px 27px rgb(0 0 0 / 5%);
   border-radius: 12px;
@@ -412,7 +412,8 @@ body {
   padding: 16px 8px;
 }
 
-.ant-list.ant-list-split.header-notifications-dropdown ul.ant-list-items {
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown
+  ul.ant-dropdown-menu-items {
   margin: 0px;
   padding: 0px;
 }
@@ -421,10 +422,13 @@ body {
   min-width: inherit !important;
 }
 
-.ant-list.ant-list-split.header-notifications-dropdown .ant-list-item {
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown
+  .ant-list-item {
   padding: 5px 16px;
+  margin-bottom: 8px;
 }
-.ant-list.ant-list-split.header-notifications-dropdown .ant-avatar {
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown
+  .ant-avatar {
   width: 36px;
   height: 36px;
   background-color: #fafafa;
@@ -433,18 +437,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-.ant-list.ant-list-split.header-notifications-dropdown
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown
   .ant-list-item-meta-title {
   line-height: normal;
 }
-.ant-list.ant-list-split.header-notifications-dropdownt
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdownt
   .ant-list-item-meta-description {
   color: #8c8c8c;
   font-size: 12px;
   line-height: 12px;
   font-weight: 600;
 }
-.ant-list.ant-list-split.header-notifications-dropdown
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown
   .ant-list-item-meta-description
   svg {
   width: 14px;
@@ -453,25 +457,25 @@ body {
   vertical-align: middle;
   margin-right: 4px;
 }
-.ant-list.ant-list-split.header-notifications-dropdown
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown
   .ant-list-item-meta-description
   svg
   path {
   fill: #8c8c8c;
 }
-.ant-list.ant-list-split.header-notifications-dropdown
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown
   .ant-list-item-meta-description
   span {
   vertical-align: middle;
 }
 
-.ant-list.ant-list-split.header-notifications-dropdown
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown
   .ant-avatar
   .ant-avatar-string {
   top: 6px;
 }
 
-.ant-list.ant-list-split.header-notifications-dropdown
+.ant-dropdown-menu.ant-dropdown-menu-split.header-notifications-dropdown
   .ant-avatar
   .ant-avatar-string
   svg {
@@ -485,20 +489,6 @@ h3,
 h4 {
   font-weight: 700;
   color: #141414;
-}
-
-.ant-list-item-meta {
-  display: flex;
-  align-items: center !important;
-  padding: 6px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.ant-list-item-meta svg {
-  fill: red;
-}
-.ant-list-item-meta:hover {
-  background-color: rgb(232, 237, 238);
 }
 
 .ant-list-item-meta-title > a {
@@ -873,7 +863,7 @@ button.ant-btn.bell strong {
   font-weight: normal;
   color: #fff;
 }
-.ant-list.ant-list-split.list-notifaction {
+.ant-dropdown-menu.ant-dropdown-menu-split.list-notifaction {
   width: 336px;
 }
 
@@ -915,7 +905,7 @@ button.ant-btn.bell strong {
 .list-notifaction ul li {
   padding: 0px;
 }
-.ant-list.ant-list-split.list-notifaction {
+.ant-dropdown-menu.ant-dropdown-menu-split.list-notifaction {
   border-radius: 0.75rem;
 }
 .list-notifaction .ant-list-item-meta-title {
@@ -1515,7 +1505,7 @@ ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.left-nav li svg path {
 }
 
 .ant-card.criclebox table th {
-  /* padding-left: 24px; */
+  padding-left: 24px;
   padding-right: 24px;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -2254,7 +2244,7 @@ small.redtext {
 }
 
 .full-width path {
-  /* fill: transparent; */
+  fill: transparent;
 }
 
 .bar-chart line.apexcharts-xaxis-tick {
@@ -2561,7 +2551,7 @@ section.ant-layout.layout-content .ant-layout-content.content-ant {
 }
 
 .transactions-list .ant-list-item-meta {
-  align-items: center !important;
+  align-items: center;
 }
 
 .text-warning {

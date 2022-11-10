@@ -6,14 +6,14 @@ function Footer() {
   const { Footer: AntFooter } = Layout;
 
   return (
-    <AntFooter style={{ background: '#fafafa' }}>
+    <AntFooter>
       <Row className="just">
         <Col xs={24} md={12} lg={12}>
           <div className="copyright">
             © 2022, made with
             <HeartFilled /> by
             <a href="#pablo" className="font-weight-bold" target="_blank">
-              TaiNA
+              MIRABO
             </a>
           </div>
         </Col>
@@ -26,7 +26,7 @@ function Footer() {
                   className="nav-link text-muted"
                   target="_blank"
                 >
-                  Creative TaiNA
+                  Creative MIRABO
                 </a>
               </li>
               <li className="nav-item">

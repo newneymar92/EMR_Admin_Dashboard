@@ -46,7 +46,7 @@ function Header({ name, subName, onPress }) {
   const menu = <Menu items={dataLogined} />;
 
   const dataBreacrumb = {
-    [PATH_URL.CAMERA_MANAGEMENT]: 'CameraManagement',
+    [PATH_URL.CAMERA_MANAGEMENT]: 'List Camera',
   };
   const dataSubBreacrumb = {
     [PATH_URL.ACCOUNT_MANAGEMENT_CHANGE_PASS]: 'ChangePass',
@@ -58,7 +58,7 @@ function Header({ name, subName, onPress }) {
       <Col span={24} md={6}>
         <Breadcrumb>
           <Breadcrumb.Item>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/home">Home</NavLink>
           </Breadcrumb.Item>
           {dataBreacrumb[`/${name.split('/')[0]}`] && (
             <Breadcrumb.Item style={{ textTransform: 'capitalize' }}>

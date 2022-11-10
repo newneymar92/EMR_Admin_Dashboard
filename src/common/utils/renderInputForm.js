@@ -3,26 +3,14 @@ import MyDatePicker from '@components/common/MyDatePicker';
 import MyTag from '@components/common/MyTag';
 import SelectImage from '@components/common/SelectImage';
 import InputField from '@components/form/InputField';
-import PointModal from '@components/form/PointModal';
 import SelectField from '@components/form/SelectField';
 import TextAreaField from '@components/form/TextAreaField';
-import ItemDetail from '@pages/components/ItemDetail';
 import { Col, Row } from 'antd';
 import React from 'react';
 
 const renderInputForm = (dataFormArr) => {
   const listFiled = dataFormArr.map((item, index) => {
     switch (item.type) {
-      case TYPE_FIELD.SPAN: {
-        return (
-          <ItemDetail
-            key={index}
-            label={item.label}
-            value={item.value}
-            {...item}
-          />
-        );
-      }
       case TYPE_FIELD.INPUT_TAG: {
         return (
           <div>
@@ -86,20 +74,6 @@ const renderInputForm = (dataFormArr) => {
             defaultValue={item.defaultValue}
             subNote={item.subNote}
             {...item}
-          />
-        );
-      }
-      case TYPE_FIELD.SELECT_POINT: {
-        return (
-          <PointModal
-            name={item.name}
-            label={item.label}
-            key={index}
-            colWidth={item.colWidth}
-            rules={item.rules}
-            isHideFiled={item.isHideFiled}
-            isEdit={item.isEdit}
-            disabled={item.disabled}
           />
         );
       }
