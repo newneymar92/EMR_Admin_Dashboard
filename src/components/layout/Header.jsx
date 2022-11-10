@@ -46,7 +46,7 @@ function Header({ name, subName, onPress }) {
   const menu = <Menu items={dataLogined} />;
 
   const dataBreacrumb = {
-    [PATH_URL.ADMIN_USER_MANAGEMENT]: 'AdminManagement',
+    [PATH_URL.CAMERA_MANAGEMENT]: 'CameraManagement',
   };
   const dataSubBreacrumb = {
     [PATH_URL.ACCOUNT_MANAGEMENT_CHANGE_PASS]: 'ChangePass',

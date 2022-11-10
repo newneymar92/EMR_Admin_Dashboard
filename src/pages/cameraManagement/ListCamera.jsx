@@ -6,10 +6,8 @@ import { Radio, Row } from 'antd';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-function ListAdminUser() {
-  const { t } = useTranslation();
+function ListCamera() {
   const titleTable = 'List Admin User';
-  const titleRedirectAddPage = t('adminUserManagement.form.addUser');
   const [isVisibleDeleteUser, setIsVisibleDeleteUser] = useState({
     isShow: false,
     id: null,
@@ -20,6 +18,10 @@ function ListAdminUser() {
     take: 10,
     total: 0,
   });
+
+  const handleRecord = (record) => {
+    console.log('record', record);
+  };
 
   const onOpenModal = (id) => {
     document.body.classList.add('salmon');
@@ -36,8 +38,6 @@ function ListAdminUser() {
       id: null,
     });
   };
-
-  const onDeleteUser = () => {};
 
   const handleTableChange = (newPagination) => {
     setPagination({
@@ -92,7 +92,7 @@ function ListAdminUser() {
           textConfirm="confirm"
           showModal={isVisibleDeleteUser.isShow}
           handleCancel={onCloseModal}
-          handleOk={onDeleteUser}
+          handleOk={onCloseModal}
           textBtnOk="ok"
           textBtnCancel="cancel"
         />
@@ -102,9 +102,7 @@ function ListAdminUser() {
         columns={columns}
         data={adminUserList}
         pagination={pagination}
-        isDynamicData
-        handleRecord={() => null}
-        dataSource={{ initData: [] }}
+        handleRecord={handleRecord}
         onChangeTable={handleTableChange}
         isHasRedirect
       />
@@ -112,6 +110,6 @@ function ListAdminUser() {
   );
 }
 
-ListAdminUser.propTypes = {};
+ListCamera.propTypes = {};
 
-export default ListAdminUser;
+export default ListCamera;

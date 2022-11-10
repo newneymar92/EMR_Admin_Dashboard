@@ -15,16 +15,18 @@ function Sidenav({ color }) {
 
   const lstMenuItems = [
     {
+      id: 1,
       path: PATH_URL.HOME,
       title: 'Home',
       icon: <IconDashboard />,
       pageItem: 'home',
     },
     {
-      path: PATH_URL.ADMIN_USER_MANAGEMENT,
-      title: 'Table',
+      id: 2,
+      path: PATH_URL.CAMERA_MANAGEMENT,
+      title: 'ListCamera',
       icon: <IconDashboard />,
-      pageItem: 'admin-management',
+      pageItem: 'camera-management',
     },
   ];
 
@@ -36,9 +38,9 @@ function Sidenav({ color }) {
       <hr />
       <Menu theme="light" mode="inline">
         {token &&
-          lstMenuItems.map((menuItem, index) => {
+          lstMenuItems.map((menuItem) => {
             return (
-              <Menu.Item key={index}>
+              <Menu.Item key={menuItem.id}>
                 <NavLink to={menuItem.path}>
                   <span
                     className="icon"

@@ -17,3 +17,5 @@ export { ReactComponent as IconCart } from './icon_cart.svg';
 export { ReactComponent as IconDropDown } from './icon_drop_down.svg';
 export { ReactComponent as IconBike } from './icon_bike.svg';
 export { ReactComponent as IconShirt } from './icon_shirt.svg';
+export { ReactComponent as IconLogo } from './icon_miyoru.svg';
+export { ReactComponent as IconTemplate } from './icon_template.svg';

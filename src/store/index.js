@@ -2,8 +2,11 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import persistReducer from 'redux-persist/es/persistReducer';
 import storage from 'redux-persist/lib/storage';
+import camera from './slices/cameraSlice';
 
-const reducers = combineReducers({});
+const reducers = combineReducers({
+  camera,
+});
 
 const persistConfig = {
   key: 'root',

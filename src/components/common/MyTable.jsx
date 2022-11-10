@@ -88,9 +88,8 @@ function MyTable({
               onRow={(record, rowIndex) => {
                 return {
                   onClick: (event) => {
-                    // event.preventDefault();
                     handleRecord(record);
-                  }, // click row
+                  },
                 };
               }}
               onChange={onChangeTable}

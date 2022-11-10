@@ -1,29 +1,31 @@
-import PATH_URL from '@common/config/pathURL';
-import routes from '@common/config/routers';
-import LayoutView from '@components/layout';
-import LoadingView from '@components/LoadingView';
-import Login from '@pages/login';
 import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   BrowserRouter as Router,
-  Navigate,
-  Route,
   Routes,
+  Route,
+  Navigate,
 } from 'react-router-dom';
+import routes from '@common/config/routers';
+import LoadingView from '@components/LoadingView';
+import LayoutView from '@components/layout';
 
 function App() {
   const generateRoutes = () => {
     let result = null;
-    result = routes.map((route, index) => {
+    result = routes.map((route) => {
       return (
         <Route
-          key={index}
+          key={route.id}
           path={route.path}
           element={
-            <LayoutView isAuthenticate={route.isAuthenticate}>
-              {route.element}
-            </LayoutView>
+            route.isNoLayout ? (
+              route.element
+            ) : (
+              <LayoutView isAuthenticate={route.isAuthenticate}>
+                {route.element}
+              </LayoutView>
+            )
           }
         />
       );
@@ -43,7 +45,7 @@ function App() {
         <Suspense fallback={<LoadingView />}>
           <Router>
             <Routes>
-              <Route path={PATH_URL.LOGIN} element={<Login />} />
+              <Route />
               {generateRoutes()}
               <Route path="/*" element={<Navigate to="/" replace />} />
             </Routes>

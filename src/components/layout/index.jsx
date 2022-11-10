@@ -2,6 +2,7 @@ import { Affix, Drawer, Layout } from 'antd';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 import Header from './Header';
 import Sidenav from './Sidenav';
 
@@ -24,11 +25,7 @@ function LayoutView({ isAuthenticate, children }) {
   pathname = pathname.replace('/', '');
 
   return (
-    <Layout
-      className={`layout-dashboard ${
-        pathname === 'profile' ? 'layout-profile' : ''
-      } ${pathname === 'rtl' ? 'layout-dashboard-rtl' : ''}`}
-    >
+    <Layout className="layout-dashboard">
       <Drawer
         title={false}
         placement={placement === 'right' ? 'left' : 'right'}
@@ -37,22 +34,14 @@ function LayoutView({ isAuthenticate, children }) {
         visible={visible}
         key={placement === 'right' ? 'left' : 'right'}
         width={250}
-        className={`drawer-sidebar ${
-          pathname === 'rtl' ? 'drawer-sidebar-rtl' : ''
-        } `}
+        className="drawer-sidebar"
       >
-        <Layout
-          className={`layout-dashboard ${
-            pathname === 'rtl' ? 'layout-dashboard-rtl' : ''
-          }`}
-        >
+        <Layout className="layout-dashboard">
           <Sider
             trigger={null}
             width={250}
             theme="light"
-            className={`sider-primary main-bg-color ant-layout-sider-primary ${
-              sidenavType === '#fff' ? 'active-route' : ''
-            }`}
+            className="sider-primary main-bg-color ant-layout-sider-primary"
             style={{ background: sidenavType }}
           >
             <Sidenav color={sidenavColor} />
@@ -62,13 +51,11 @@ function LayoutView({ isAuthenticate, children }) {
       <Sider
         breakpoint="lg"
         collapsedWidth="0"
-        onCollapse={(collapsed, type) => {}}
+        onCollapse={() => {}}
         trigger={null}
         width={250}
         theme="light"
-        className={`sider-primary side-nav ma-0 main-bg-color ant-layout-sider-primary ${
-          sidenavType === '#fff' ? 'active-route' : ''
-        }`}
+        className="sider-primary side-nav ma-0 main-bg-color ant-layout-sider-primary"
         style={{ background: sidenavType }}
       >
         <Sidenav color={sidenavColor} isAuthenticate={isAuthenticate} />
@@ -100,7 +87,7 @@ function LayoutView({ isAuthenticate, children }) {
           </AntHeader>
         )}
         <Content className="content-ant">{children}</Content>
-        {/* <Footer /> */}
+        <Footer />
       </Layout>
     </Layout>
   );
