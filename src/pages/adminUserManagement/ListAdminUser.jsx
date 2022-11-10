@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 function ListAdminUser() {
   const { t } = useTranslation();
-  const titleTable = t('adminUserManagement.title');
+  const titleTable = 'List Admin User';
   const titleRedirectAddPage = t('adminUserManagement.form.addUser');
   const [isVisibleDeleteUser, setIsVisibleDeleteUser] = useState({
     isShow: false,
@@ -55,21 +55,22 @@ function ListAdminUser() {
       key: 'ID',
     },
     {
-      title: `${t('adminUserManagement.form.username')}`,
+      title: 'Name',
       dataIndex: 'nickname',
       key: 'userName',
     },
     {
-      title: `${t('adminUserManagement.form.registrationDate')}`,
+      title: 'Create At',
       dataIndex: 'createdAt',
       key: 'registrationDate',
     },
     {
-      title: `${t('adminUserManagement.form.email')}`,
+      title: 'Email',
       dataIndex: 'email',
       key: 'email',
     },
     {
+      align: 'center',
       render: (_, values) => (
         <Radio.Group>
           <Radio.Button
@@ -105,7 +106,6 @@ function ListAdminUser() {
         handleRecord={() => null}
         dataSource={{ initData: [] }}
         onChangeTable={handleTableChange}
-        titleRedirectAddPage={titleRedirectAddPage}
         isHasRedirect
       />
     </div>

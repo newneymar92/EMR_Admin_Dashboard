@@ -30,15 +30,15 @@ function Header({ name, subName, onPress }) {
       key: 1,
     },
     {
-      label: <div>{t('pulldown.notify')}</div>,
+      label: <div>Notify</div>,
       key: 2,
     },
     {
-      label: <div onClick={() => {}}>{t('pulldown.settingInfo')}</div>,
+      label: <div onClick={() => {}}>Setting Info</div>,
       key: 3,
     },
     {
-      label: <div onClick={handleLogout}>{t('pulldown.logout')}</div>,
+      label: <div onClick={handleLogout}>Logout</div>,
       key: 4,
     },
   ];
@@ -46,18 +46,11 @@ function Header({ name, subName, onPress }) {
   const menu = <Menu items={dataLogined} />;
 
   const dataBreacrumb = {
-    [PATH_URL.USER_MANAGEMENT]: t('menu.userManagement'),
-    [PATH_URL.ADMIN_USER_MANAGEMENT]: t('menu.adminUserManagement'),
-    [PATH_URL.ACCOUNT_MANAGEMENT]: t('menu.accountManagement'),
-    [PATH_URL.MISSION_MANAGEMENT]: t('menu.missionManagement'),
-    [PATH_URL.TURNOVER_MANAGEMENT]: t('menu.turnoverManagement'),
-    [PATH_URL.KPI_MANAGEMENT]: t('menu.kpiManagement'),
-    [PATH_URL.EVENT_MANAGEMENT]: t('menu.eventManagement'),
+    [PATH_URL.ADMIN_USER_MANAGEMENT]: 'AdminManagement',
   };
   const dataSubBreacrumb = {
-    [PATH_URL.USER_DETAIL]: t('menu.userDetail'),
-    [PATH_URL.ACCOUNT_MANAGEMENT_CHANGE_PASS]: t('menu.resetPassword'),
-    [PATH_URL.ACCOUNT_MANAGEMENT_CHANGE_EMAIL]: t('menu.changeEmail'),
+    [PATH_URL.ACCOUNT_MANAGEMENT_CHANGE_PASS]: 'ChangePass',
+    [PATH_URL.ACCOUNT_MANAGEMENT_CHANGE_EMAIL]: 'ChangeEmail',
   };
 
   return (
@@ -65,7 +58,7 @@ function Header({ name, subName, onPress }) {
       <Col span={24} md={6}>
         <Breadcrumb>
           <Breadcrumb.Item>
-            <NavLink to="/">{t('menu.home')}</NavLink>
+            <NavLink to="/">Home</NavLink>
           </Breadcrumb.Item>
           {dataBreacrumb[`/${name.split('/')[0]}`] && (
             <Breadcrumb.Item style={{ textTransform: 'capitalize' }}>
@@ -100,7 +93,11 @@ function Header({ name, subName, onPress }) {
               trigger={['click']}
               className="ma-10 cursor-pointer"
             >
-              <img src="jjjj" alt="avatar" className="header-avatar" />
+              <img
+                src="https://banner2.cleanpng.com/20180920/yko/kisspng-computer-icons-portable-network-graphics-avatar-ic-5ba3c66df14d32.3051789815374598219884.jpg"
+                alt="avatar"
+                className="header-avatar"
+              />
             </Dropdown>
           </div>
         </Col>

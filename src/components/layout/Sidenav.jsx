@@ -4,7 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { IconDashboard } from '@assets/icons';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-import logo from '../../assets/images/logovr.png';
+import logo from '../../assets/images/logovr.svg';
 import PATH_URL from '../../common/config/pathURL';
 
 function Sidenav({ color }) {
@@ -16,13 +16,13 @@ function Sidenav({ color }) {
   const lstMenuItems = [
     {
       path: PATH_URL.HOME,
-      title: t('menu.home'),
+      title: 'Home',
       icon: <IconDashboard />,
       pageItem: 'home',
     },
     {
       path: PATH_URL.ADMIN_USER_MANAGEMENT,
-      title: t('menu.adminUserManagement'),
+      title: 'Table',
       icon: <IconDashboard />,
       pageItem: 'admin-management',
     },
@@ -52,7 +52,7 @@ function Sidenav({ color }) {
                     style={{
                       color: menuItem.pageItem.includes(page)
                         ? color
-                        : '#FFFFFF',
+                        : '#000000',
                     }}
                     className="label"
                   >

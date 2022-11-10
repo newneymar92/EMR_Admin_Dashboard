@@ -1,7 +1,7 @@
 import { Button, Form, Input } from 'antd';
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logoVroad from '@assets/images/logovr.png';
+import logoVroad from '@assets/images/logovr.svg';
 import PATH_URL from '@common/config/pathURL';
 
 function Login() {
