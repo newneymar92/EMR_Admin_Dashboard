@@ -12,7 +12,7 @@ function LayoutView({ isAuthenticate, children }) {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
   const [placement, setPlacement] = useState('right');
-  const [sidenavColor, setSidenavColor] = useState('#1890ff');
+  const [sidenavColor, setSidenavColor] = useState('#c8c498');
   const [sidenavType, setSidenavType] = useState('transparent');
   const [fixed, setFixed] = useState(false);
 

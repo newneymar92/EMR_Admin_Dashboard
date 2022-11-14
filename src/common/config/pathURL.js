@@ -1,6 +1,6 @@
 const PATH_URL = {
   LOGIN: '/',
   HOME: '/home',
-  CAMERA_MANAGEMENT: '/camera-management',
+  PATIENT_LIST: '/patient-list',
 };
 export default PATH_URL;

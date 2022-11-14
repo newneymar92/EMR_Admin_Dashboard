@@ -46,7 +46,7 @@ function Header({ name, subName, onPress }) {
   const menu = <Menu items={dataLogined} />;
 
   const dataBreacrumb = {
-    [PATH_URL.CAMERA_MANAGEMENT]: 'List Camera',
+    [PATH_URL.PATIENT_LIST]: 'Danh Sách Bệnh Nhân',
   };
   const dataSubBreacrumb = {
     [PATH_URL.ACCOUNT_MANAGEMENT_CHANGE_PASS]: 'ChangePass',
@@ -73,6 +73,14 @@ function Header({ name, subName, onPress }) {
             </Breadcrumb.Item>
           )}
         </Breadcrumb>
+        <div className="ant-page-header-heading">
+          <span
+            className="ant-page-header-heading-title"
+            style={{ textTransform: 'capitalize' }}
+          >
+            {dataBreacrumb[`/${name}`]}
+          </span>
+        </div>
       </Col>
       {token ? (
         <Col

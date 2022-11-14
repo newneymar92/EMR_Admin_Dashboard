@@ -208,7 +208,7 @@ function Login() {
           </Menu.Item>
         </Menu>
         <p className="copyright">
-          Copyright © 2021 by <a href="#pablo">Creative Mirabo</a>.
+          Copyright © 2021 by <a href="#pablo">Creative TaiNA</a>.
         </p>
       </Footer>
     </Layout>

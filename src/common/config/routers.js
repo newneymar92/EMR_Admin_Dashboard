@@ -19,7 +19,7 @@ const routes = [
   },
   {
     id: 3,
-    path: PATH_URL.CAMERA_MANAGEMENT,
+    path: PATH_URL.PATIENT_LIST,
     element: <AdminUserManagement />,
     isNoLayout: false,
   },

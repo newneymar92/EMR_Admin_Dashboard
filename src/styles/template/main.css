@@ -137,7 +137,7 @@ body {
   .ant-menu-submenu.ant-menu-item-selected
   .active,
 .layout-dashboard .ant-layout-sider.sider-primary .ant-menu-submenu .active {
-  background-color: #fff;
+  background-color: #022a52;
   box-shadow: 0 20px 27px rgb(0 0 0 / 5%);
   font-weight: 600;
 }
@@ -1626,7 +1626,7 @@ ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.left-nav
 .ant-table-thead > tr > th {
   color: #8c8c8c;
   font-weight: 700;
-  background-color: transparent;
+  background-color: #fff;
   font-size: 12px;
 }
 
@@ -1635,7 +1635,7 @@ ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.left-nav
 }
 .ant-table-tbody > tr > td,
 .ant-table-thead > tr > th {
-  padding: 16px 25px;
+  padding: 10px;
 }
 .tablespace {
   overflow: hidden;

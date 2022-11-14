@@ -14,8 +14,8 @@ import messagesEnglish from '@common/translations/en';
 import App from './App';
 import store from './store';
 
-import './styles/index.scss';
 import './styles/theme.less';
+import './styles/index.scss';
 
 dayjs.locale('vi');
 

@@ -24,12 +24,12 @@ function SelectField({
   const { onChange } = props;
 
   return (
-    <Col xs={colWidth || 24}>
+    <Col className="find-patient-col" span={colWidth}>
       <Form.Item rules={rules} label={label} name={name}>
         <Select
           mode={mode}
           allowClear
-          suffixIcon={<IconDropDown className="anticon" />}
+          showSearch
           disabled={disabled}
           style={style}
           placeholder={placeholder}

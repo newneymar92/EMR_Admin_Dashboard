@@ -23,10 +23,10 @@ function Sidenav({ color }) {
     },
     {
       id: 2,
-      path: PATH_URL.CAMERA_MANAGEMENT,
-      title: 'List Camera',
+      path: PATH_URL.PATIENT_LIST,
+      title: 'Danh Sách Bệnh Nhân',
       icon: <IconDashboard />,
-      pageItem: 'camera-management',
+      pageItem: 'patient-list',
     },
   ];
 

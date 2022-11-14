@@ -43,10 +43,9 @@ function MyTable({
   };
 
   return (
-    <div className="table-default">
+    <div className="my-table-default">
       <Card
         bordered={false}
-        className="criclebox tablespace mb-25"
         title={titleTable}
         extra={
           <div className="display-flex js-flex-end">

@@ -13,7 +13,7 @@ function Footer() {
             © 2022, made with
             <HeartFilled /> by
             <a href="#pablo" className="font-weight-bold" target="_blank">
-              MIRABO
+              TaiNA
             </a>
           </div>
         </Col>
@@ -26,7 +26,7 @@ function Footer() {
                   className="nav-link text-muted"
                   target="_blank"
                 >
-                  Creative MIRABO
+                  Creative TaiNA
                 </a>
               </li>
               <li className="nav-item">
