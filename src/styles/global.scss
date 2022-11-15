@@ -192,4 +192,16 @@ $sides: (top, bottom, left, right);
 .cursor-pointer {
   cursor: pointer;
 }
-
+.ant-drawer-body {
+  padding: 0;
+}
+.ant-drawer-header {
+  background-color: #03315d;
+  .ant-drawer-close {
+    color: #c8c498;
+  }
+  .ant-drawer-title {
+    color: #c8c498;
+    font-weight: 600;
+  }
+}

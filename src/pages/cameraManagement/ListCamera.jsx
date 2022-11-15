@@ -294,7 +294,6 @@ function ListCamera() {
     <div className="patient-list-management">
       <Row>
         <Drawer
-          className="patient-list-drawer pa-0"
           title="Cấu hình bộ dữ liệu"
           placement="right"
           onClose={onClose}

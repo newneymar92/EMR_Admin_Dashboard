@@ -1,24 +1,17 @@
-.patient-list-management{
-  .patient-list-drawer{
-    .ant-drawer .ant-drawer-body{
-      padding: 0px !important;
-    }
-  }
-  .patient-list-form{
+.patient-list-management {
+  .patient-list-form {
     background-color: #ffffff;
-    .patient-list-header{
+    .patient-list-header {
       color: #c8c498;
-      background-color: #022a52;
+      background-color: #03315d;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
     }
     .find-patient-col {
       padding: 10px 10px;
     }
-    .patient-list-form{
+    .patient-list-form {
       width: 95%;
     }
-    
   }
-    
 }

@@ -10,7 +10,7 @@ import {
   Switch,
 } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import signinbg from '@assets/images/img-signin.jpg';
 import {
   DribbbleOutlined,
@@ -30,6 +30,7 @@ const { Title } = Typography;
 const { Header, Footer, Content } = Layout;
 
 function Login() {
+  const [token, setToken] = useState(false);
   const navigate = useNavigate();
 
   const onChange = (checked) => {
@@ -37,11 +38,11 @@ function Login() {
   };
   const onFinish = (values) => {
     console.log('submit');
+    setToken(true);
   };
   const onFinishFailed = () => {
     console.log('submit fail');
   };
-  const token = false;
 
   useEffect(() => {
     if (token) navigate(PATH_URL.HOME);

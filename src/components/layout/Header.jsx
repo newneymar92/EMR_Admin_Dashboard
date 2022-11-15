@@ -22,7 +22,9 @@ function Header({ name, subName, onPress }) {
     navigate(path);
   };
 
-  const handleLogout = () => {};
+  const handleLogout = () => {
+    navigate(PATH_URL.LOGIN);
+  };
 
   const dataLogined = [
     {
